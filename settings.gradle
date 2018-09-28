@@ -1,0 +1,12 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-platform-common") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
+rootProject.name = 'kStAX'
+
+include 'kStAX-common', 'kStAX-common:kStAX-jvm', 'kStAX-common:kStAX-js'
